@@ -46,16 +46,16 @@ def Rules():
 
 
 def question_choose(play_player, choice):
-    for i in range(1, 10):
+    for i in range(1, 11):
         question = random.choice(choice)
         print(f"{play_player}'s question number{i}:{question}")
         speak(f"{play_player}'s question number{i}.:{question}")
         time.sleep(2)
         nxt = input("Are you satisfied?\ny/n\t>>")
-        if "n" or "N" in nxt:
+        if "y" or "Y" in nxt:
+            speak(f"Perfect{play_player}")
+        elif "n" or "N" in nxt:
             speak(f"{play_player}, not good")
-        elif "y" or "Y" in nxt:
-            speak("Perfect")
         else:
             print("Invalid input!!!!")
             speak("Invalid input.")
@@ -126,7 +126,8 @@ def Player_Choice():
         speak("Enter the players name")
         name1 = name_loader()
         name2 = name_loader()
-        Greeting(name1, name2)
+        print(f"Hello {name1}, {name2}, I am Friday, a NPC(Non Player Character).")
+        speak(f"Hello {name1}, {name2}, I am Friday, a NPC(Non Player Character).")
         player_name = input(f"Who want to give answer first {name1} or {name2}?\n Enter the name:")
         Rules()
         Player_category_choice(player_name)
