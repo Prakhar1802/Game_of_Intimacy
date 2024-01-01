@@ -14,7 +14,7 @@ This game involves elements such as:
 1. **Installation:** Ensure you have Python installed.
 2. **Clone the repository:** 
    ```bash
-   git clone https://github.com/your_username/relationship-intimacy-game.git
+   git clone [https://github.com/your_username/relationship-intimacy-game.git](https://github.com/Prakhar1802/Game_of_Intimacy.git)
    
 1. Run the script: Execute python relationship_game.py to start the game.
 Usage
